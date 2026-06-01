@@ -1,7 +1,7 @@
 function maskEmail(email) {
     let numtomask = email.indexOf("@");
     let num = numtomask -2;
-    let secondLastLetter = email.slice(-numtomask);
+    
     let maskedEmail = "*".repeat(num);
     let rest = email.slice(numtomask);
     let finalEmail =  email[0] + maskedEmail + num + rest;
