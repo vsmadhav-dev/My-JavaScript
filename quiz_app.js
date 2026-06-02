@@ -52,3 +52,13 @@ function getResults(questionObj, computerChoice) {
     return `The computer's choice is wrong. The correct answer is: ${questionObj.answer}`;
   }
 }
+// Code to check whether the functions are working correctly or not. 
+const selectedQuestion = getRandomQuestion(questions);
+console.log(selectedQuestion.category);
+console.log(selectedQuestion.question);
+
+const computerSelection = getRandomComputerChoice(selectedQuestion.choices);
+console.log(computerSelection);
+
+const gameResult = getResults(selectedQuestion, computerSelection);
+console.log(gameResult);
