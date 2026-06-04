@@ -59,4 +59,6 @@ function getWordCount(sentence) {
 
   return count;
 }
+let wors = getWordCount("I love coding.");
 
+console.log(wors);
