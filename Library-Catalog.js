@@ -16,7 +16,7 @@ const rawCatalogCards = [
   "Ready Player One | Cline, Ernest | 2011 | Shelf C7",
   "The Dark Tower: The Gunslinger | King, Stephen | 1982 | Shelf K5",
    "Unknown Title |  | 1975 | Shelf X1",
-  "Mysterious Manuscript | Unknown Author |  | Shelf Z9",
+  "Mysterious Manuscript | Unknown |  | Shelf Z9",
   "Ancient Scroll | Anonymous | 850 | ",
 ];
 
