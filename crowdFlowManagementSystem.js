@@ -43,3 +43,45 @@ function rerouteOverflow(gates, currentGate, tickIndex, overflowAmount) {
   );
 }
 
+function handleGateAtTick(gates, gate, tickIndex, throughputSummary) {
+  console.log("\nProcessing " + gate.id + "...");
+  console.log(
+    gate.queue[tickIndex] + " attendees arriving."
+  );
+  const result = processGateFlow(gate, tickIndex);
+  throughputSummary[gate.id] += result.processed;
+  if (result.overflow > 0) {
+    console.log(
+      "Overflow of " + result.overflow +
+      " attendees. Rerouting..."
+    );
+    rerouteOverflow(gates, gate, tickIndex, result.overflow);
+  }
+}
+
+function printSummary(summary) {
+  console.log("\nThroughput Summary");
+  for (const gateId in summary) {
+    console.log(
+      gateId + ": " + summary[gateId] +
+      " attendees processed"
+    );
+  }
+}
+
+function simulateFestival(gates, timeBlock) {
+  console.log("\n" + timeBlock + " Simulation");
+  const throughputSummary = initializeThroughput(gates);
+  const maxTicks = gates[0].queue.length;
+  let tickIndex = 0;
+  while (tickIndex < maxTicks) {
+    console.log("\nTick " + (tickIndex + 1));
+    for (const gate of gates) {
+      handleGateAtTick(gates, gate, tickIndex, throughputSummary);
+    }
+    tickIndex++;
+  }
+  printSummary(throughputSummary);
+}
+
+simulateFestival(morningGates, "Morning");
