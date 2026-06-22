@@ -1,4 +1,7 @@
 function paperWrapper(boxes) {
+  if(!Array.isArray(boxes[0])){
+    boxes = [boxes];
+  }
 let paperRequired =  boxes.reduce((total , [l,w ,h]) =>{
   let area = 2 *(l * w + w * h + h * l);
   area += Math.min(l * w , w * h , h * l);
@@ -6,4 +9,4 @@ let paperRequired =  boxes.reduce((total , [l,w ,h]) =>{
 }, 0);
 return paperRequired;
 }
-console.log(paperWrapper([[3 , 4 , 5]]));
+console.log(paperWrapper([3 , 4 , 5]));
