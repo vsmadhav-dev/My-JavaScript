@@ -11,3 +11,4 @@ function titleCase(str){
   return title.trim();
 
 }
+console.log(titleCase("I'm a little tea poT."));
