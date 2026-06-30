@@ -1,5 +1,6 @@
 const ban = "bad terrible garbage trash hate";
-const incoming = ["Bad" ,  "message"];
+let incoming = "Bad message";
+incoming = incoming.split(" ");
 const filter = incoming.map(function(str) {
     if(ban.includes(str.toLowerCase())){
        let result = "good";
@@ -8,4 +9,5 @@ const filter = incoming.map(function(str) {
         return str;
     }
 });
-console.log(filter);
+let final = filter.join(" ");
+console.log(final);
