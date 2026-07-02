@@ -8,4 +8,4 @@ function bouncer(arr){
   }
   return finalarr;
 }
-console.log(bouncer(["a", false , NaN, "c"]))
+console.log(bouncer(["a", false , NaN, "c"]));
