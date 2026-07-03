@@ -17,4 +17,13 @@ if(inventory[i].name == lower){
   }
   return -1;
 }
+function addProduct(product){
+for(let i = 0; i < inventory.length; i++){
+  if(product == inventory[i]){
+    inventory[i].quantity++;
+    console.log(quantity);
+    console.log("quantity updated")
+  }
+}
+}
 console.log(findProductIndex("chocolate"))
