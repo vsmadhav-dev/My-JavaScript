@@ -1,11 +1,4 @@
-const inventory = [{
-  name: "cake" ,
-  quantity: 7 
-},
-{
-name: "chocolate" ,
-quantity: 5
-}];
+const inventory = [];
 function findProductIndex(productname){
   let lower = productname.toLowerCase();
 for(let i = 0; i < inventory.length; i++){
@@ -18,12 +11,15 @@ if(inventory[i].name == lower){
   return -1;
 }
 function addProduct(product){
-for(let i = 0; i < inventory.length; i++){
-  if(product == inventory[i]){
-    inventory[i].quantity++;
-    console.log(quantity);
-    console.log("quantity updated")
-  }
-}
+  let p = product.name.toLowerCase();
+ let index = findProductIndex(p);
+ if(index != -1){
+  inventory[index].quantity += product.quantity;
+  console.log(inventory[index].name + " quantity updated");
+ }else{
+  product.name = p;
+  inventory.push(product);
+  console.log(product.name + " added to inventory");
+ }
 }
 console.log(findProductIndex("chocolate"))
