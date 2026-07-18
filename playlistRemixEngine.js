@@ -82,7 +82,33 @@ function dedupeTracks(arr){
   }
   return finalarr;
 }
+function enforceArtistQuota(arr , maxPerArtist){
+  let dedupe;
+  let artist;
+   let finalarr = [];
+  if (!Array.isArray(arr)) {
+    return [];
+  }
+  
+    dedupe = dedupeTracks(arr);
+ 
+  const artistcounts = {};
+  for( const i of dedupe){
+   artist = i.artist;
+  if (artistcounts[artist] === undefined) {
+  artistcounts[artist] = 0;
+}
+  
+   if(artistcounts[artist] < maxPerArtist ){
+ finalarr.push(i);
+ artistcounts[artist]++;
+   }else{
+    continue;
+   }
+  }
+  return finalarr;
 
-
+  }
+  
 const processedTracks = dedupeTracks(scoreTracks(playlists));
 console.log(processedTracks);
