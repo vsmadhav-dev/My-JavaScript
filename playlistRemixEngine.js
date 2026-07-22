@@ -109,6 +109,25 @@ function enforceArtistQuota(arr , maxPerArtist){
   return finalarr;
 
   }
-  
-const processedTracks = dedupeTracks(scoreTracks(playlists));
-console.log(processedTracks);
+  function buildSchedule(arr){
+    let returnarr = [];
+     if (!Array.isArray(arr)) { return []; }
+     for(let i = 0; i < arr.length; i++){
+      returnarr.push(
+        {
+          slot: i + 1 ,
+          trackId: arr[i].trackId
+
+        }
+      );
+     }
+     return returnarr;
+  }
+ function remixPlaylist(arr , allow){
+  let flat = flattenPlaylists(arr);
+  let score = scoreTracks(flat);
+  let dedupe = dedupeTracks(score);
+  let artistquota = enforceArtistQuota(dedupe , allow);
+  let build = buildSchedule(artistquota);
+  return build;
+ } 
