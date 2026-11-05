@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Palindrome Checker</title>
+    <meta name="description" content="Check whether a word, phrase or number reads the same forwards and backwards.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="palindrome.css">
+</head>
+
+<body>
+<main class="shell">
+    <header class="hero">
+        <div class="mirror" aria-hidden="true">
+            <span class="word">level</span>
+            <span class="axis"></span>
+            <span class="word reflection">level</span>
+        </div>
+        <h1>Palindrome checker</h1>
+        <p class="lede">Does it read the same forwards and backwards? Spaces, punctuation and capital letters are ignored.</p>
+    </header>
+
+    <section class="card" aria-label="Palindrome checker">
+        <label for="text-input">Word, phrase or number</label>
+        <div class="field">
+            <input id="text-input" type="text" placeholder="Try: race car" autocomplete="off" spellcheck="false">
+            <button id="check-btn" type="button">Check</button>
+        </div>
+        <div id="result" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="examples" aria-labelledby="examples-title">
+        <h2 id="examples-title">Try one of these</h2>
+        <ul>
+            <li><span>race car</span><span>palindrome</span></li>
+            <li><span>never odd or even</span><span>palindrome</span></li>
+            <li><span>A man, a plan, a canal. Panama</span><span>palindrome</span></li>
+            <li><span>nope</span><span>not a palindrome</span></li>
+        </ul>
+    </section>
+</main>
+
+<script src="palindrome.js"></script>
+</body>
+
+</html>
