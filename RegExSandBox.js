@@ -21,7 +21,13 @@ function getFlags() {
 testButton.addEventListener('click' , ()=>{
     let flags =  getFlags();
     console.log(regexPattern.value)
-    regexPattern =  new  RegExp(regexPattern.value , flags)
-    console.log(regexPattern);
-
-})
+    let pattern =  new  RegExp(regexPattern.value , flags)
+    console.log(pattern);
+    let test = stringToTest.textContent.match(pattern);
+    console.log(test);
+    if(test){
+        result.innerText = test[0];
+    }else{
+        result.innerText = ' No Match Found'
+    }
+});
