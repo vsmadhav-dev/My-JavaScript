@@ -1,18 +1,27 @@
-const regexPattern = document.querySelector('#pattern');
-const stringTOTest = document.querySelector('#test-string');
+let regexPattern = document.querySelector('#pattern');
+const stringToTest = document.querySelector('#test-string');
 const testButton = document.querySelector('#test-btn');
-const testResult = document.querySelector('#testResult');
+const testResult = document.querySelector('#result');
 const caseInsensitiveFlag = document.querySelector('#i');
 const globalFlag = document.querySelector('#g');
 
-function getFlags(){
-    let box;
-    if(caseInsensitiveFlag.checked){
-        box = 'i';
-    }else if(globalFlag){
-        box = 'g'
-    }else{
-        box='';
+function getFlags() {
+    let flags = '';
+
+    if (caseInsensitiveFlag.checked) {
+        flags += 'i';
     }
-    return box;
+    if (globalFlag.checked) {
+        flags += 'g';
+    }
+
+    return flags;
+
 }
+testButton.addEventListener('click' , ()=>{
+    let flags =  getFlags();
+    console.log(regexPattern.value)
+    regexPattern =  new  RegExp(regexPattern.value , flags)
+    console.log(regexPattern);
+
+})
