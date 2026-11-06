@@ -1,13 +1,13 @@
 # My JavaScript
 
-This repository is a collection of browser mini-apps, JavaScript algorithm exercises, data-management simulations, and small language experiments. Open the catalog with [`index.html`](index.html) to browse every project.
+This repository is a collection of browser mini-apps, JavaScript algorithm exercises, data-management simulations, and small language experiments. Open the [live project catalog](https://vsmadhav-dev.github.io/My-JavaScript/) or [`index.html`](index.html) to browse every project.
 
 ## Browser projects
 
 These projects have an HTML interface and can be opened directly in a browser.
 
 | Project | Entry point | Implementation | Function |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | Regex Sandbox | [`RegExSandbox.html`](RegExSandbox.html) | [`RegExSandBox.js`](RegExSandBox.js) | Tests a regular expression against editable text with `i` and `g` flags, then highlights matches or reports invalid patterns. |
 | Coding Checklist | [`checklist.html`](checklist.html) | [`checklist.js`](checklist.js) | Renders checklist items and lets visitors toggle each item’s favorite state. |
 | Emoji Reactor | [`emoji.html`](emoji.html) | [`emojiReactor.js`](emojiReactor.js) | Records emotion ratings from four emoji buttons and caps each counter at 10 votes. |

@@ -23,8 +23,12 @@ function updateCatalog() {
 
 filters.forEach((filter) => {
   filter.addEventListener("click", () => {
-    filters.forEach((item) => item.classList.remove("is-active"));
+    filters.forEach((item) => {
+      item.classList.remove("is-active");
+      item.setAttribute("aria-pressed", "false");
+    });
     filter.classList.add("is-active");
+    filter.setAttribute("aria-pressed", "true");
     updateCatalog();
   });
 });
