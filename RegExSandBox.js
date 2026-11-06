@@ -26,8 +26,15 @@ testButton.addEventListener('click' , ()=>{
     let test = stringToTest.textContent.match(pattern);
     console.log(test);
     if(test){
-        result.innerText = test[0];
+
+        testResult.innerText = flags.includes('g') ? test.join(', ') : test[0];
+
+        stringToTest.innerHTML = stringToTest.innerText.replace(
+            pattern,
+            match => `<span class="highlight">${match}</span>`
+        );
     }else{
-        result.innerText = ' No Match Found'
+        testResult.innerText = 'no match'
+        stringToTest.innerHTML = stringToTest.innerText
     }
 });
