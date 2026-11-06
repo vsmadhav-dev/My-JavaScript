@@ -6,17 +6,17 @@ This repository is a collection of browser mini-apps, JavaScript algorithm exerc
 
 These projects have an HTML interface and can be opened directly in a browser.
 
-| Project | Entry point | Function |
+| Project | Entry point | Implementation | Function |
 | --- | --- | --- |
-| Regex Sandbox | [`RegExSandbox.html`](RegExSandbox.html) | Tests a regular expression against editable text with `i` and `g` flags. |
-| Coding Checklist | [`checklist.html`](checklist.html) | Toggles favorite icons for checklist items. |
-| Emoji Reactor | [`emoji.html`](emoji.html) | Records emotion ratings from four emoji buttons, up to 10 votes each. |
-| Library Book Search | [`librarySearch.html`](librarySearch.html) | Searches a hard-coded library by exact book title. |
-| Mode Toggler | [`mode.html`](mode.html) | Switches the page between light and dark modes. |
-| Palindrome Checker | [`plaindiromeChecker.html`](plaindiromeChecker.html) | Provides a palindrome-checker page backed by `plaindrome_checker.js`. |
-| Random Background Color | [`random.html`](random.html) | Generates a dark color, applies it to the page, and displays its hex code. |
-| Storytelling App | [`story.html`](story.html) | Displays a random scary, funny, or adventure story. |
-| Number Guesser | [`legacy-index.html`](legacy-index.html) | Prompts for a number from 1–50 and reports whether the guess is correct. |
+| Regex Sandbox | [`RegExSandbox.html`](RegExSandbox.html) | [`RegExSandBox.js`](RegExSandBox.js) | Tests a regular expression against editable text with `i` and `g` flags, then highlights matches or reports invalid patterns. |
+| Coding Checklist | [`checklist.html`](checklist.html) | [`checklist.js`](checklist.js) | Renders checklist items and lets visitors toggle each item’s favorite state. |
+| Emoji Reactor | [`emoji.html`](emoji.html) | [`emojiReactor.js`](emojiReactor.js) | Records emotion ratings from four emoji buttons and caps each counter at 10 votes. |
+| Library Book Search | [`librarySearch.html`](librarySearch.html) | [`librarySearch.js`](librarySearch.js) | Searches a hard-coded library by exact title and displays the matching book details. |
+| Mode Toggler | [`mode.html`](mode.html) | [`mode.js`](mode.js) | Switches the page between light and dark modes through a button-controlled class change. |
+| Palindrome Checker | [`plaindiromeChecker.html`](plaindiromeChecker.html) | [`palindrome.js`](palindrome.js), [`plaindrome_checker.js`](plaindrome_checker.js) | Normalizes user input and reports whether a word, phrase, or number reads the same backwards. |
+| Random Background Color | [`random.html`](random.html) | [`random.js`](random.js) | Generates a dark color, applies it to the page, and displays the resulting hex code. |
+| Storytelling App | [`story.html`](story.html) | [`story.js`](story.js) | Lets visitors choose a genre and displays a random scary, funny, or adventure story. |
+| Number Guesser | [`legacy-index.html`](legacy-index.html) | [`number_gusser.js`](number_gusser.js) | Prompts for a number from 1–50, compares the guess with a random target, and reports the result. |
 
 ## Data, simulations, and applications
 
