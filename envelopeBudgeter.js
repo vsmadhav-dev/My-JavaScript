@@ -17,4 +17,9 @@ function isInvalidInput(str) {
     return str.match(regex);
 }
 
-console.log(isInvalidInput('1e3'))
+function addEntry() {
+    const category = entryDropdown.value;
+    const targetInputContainer = document.querySelector(`#${category} .input-container`);
+
+
+}
