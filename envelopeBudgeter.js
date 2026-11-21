@@ -34,12 +34,23 @@ function addEntry() {
     targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
+
+
 function getTotalFromInputs(list) {
     let total = 0;
 
     for (const item of list) {
+        const currVal = cleanInputString(item.value);
+        const invalidInputMatch = isInvalidInput(currVal);
 
+        if (invalidInputMatch) {
+            alert(`Invalid Input: ${invalidInputMatch[0]}`);
+            isError = true;
+            return null;
+        }
+        total += Number(currVal);
     }
+    return total;
 }
 
 addEntryButton.addEventListener("click", addEntry);
