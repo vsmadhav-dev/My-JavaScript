@@ -55,7 +55,25 @@ function calculateBudget(e) {
     const expenses = rent + food + utilities + entertainment;
     const netRemaining = income - expenses;
 
+    let statusText = "";
+    let statusClass = "";
 
+    if (netRemaining < 0) {
+        statusText = `Over Budget by $${Math.abs(netRemaining)}`;
+        statusClass = "deficit";
+    } else {
+        statusText = `$${netRemaining} Remaining`;
+        statusClass = "surplus";
+    }
+
+    output.innerHTML = `
+    <span class="${statusClass}">${statusText}</span>
+    <hr>
+    <p>$${income} Total Income</p>
+    <p>$${expenses} Total Expenses</p>
+  `;
+
+    output.classList.remove("hide");
 }
 
 function getTotalFromInputs(list) {
