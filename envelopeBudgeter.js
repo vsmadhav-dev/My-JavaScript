@@ -39,7 +39,22 @@ function calculateBudget(e) {
     isError = false;
 
     const foodInputs = document.querySelectorAll("#food input[type='number']");
-    const utilitiesInputs = document.querySelectorAll('#utilities input[type="number"]')
+    const utilitiesInputs = document.querySelectorAll("#utilities input[type='number']");
+    const entertainmentInputs = document.querySelectorAll("#entertainment input[type='number']");
+
+    const rent = getTotalFromInputs([rentInput]);
+    const food = getTotalFromInputs(foodInputs);
+    const utilities = getTotalFromInputs(utilitiesInputs);
+    const entertainment = getTotalFromInputs(entertainmentInputs);
+    const income = getTotalFromInputs([incomeInput]);
+
+    if (isError) {
+        return;
+    }
+
+    const expenses = rent + food + utilities + entertainment;
+    const netRemaining = income - expenses;
+
 
 }
 
