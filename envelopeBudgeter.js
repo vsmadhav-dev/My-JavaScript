@@ -34,7 +34,14 @@ function addEntry() {
     targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
+function calculateBudget(e) {
+    e.preventDefault();
+    isError = false;
 
+    const foodInputs = document.querySelectorAll("#food input[type='number']");
+    const utilitiesInputs = document.querySelectorAll('#utilities input[type="number"]')
+
+}
 
 function getTotalFromInputs(list) {
     let total = 0;
