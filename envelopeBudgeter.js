@@ -93,4 +93,19 @@ function getTotalFromInputs(list) {
     return total;
 }
 
+function clearForm() {
+    const inputContainers = Array.from(document.querySelectorAll(".input-container"));
+
+    for (const container of inputContainers) {
+        container.innerHTML = "";
+    }
+
+    incomeInput.value = "";
+    rentInput.value = "";
+    output.innerText = "";
+    output.classList.add("hide");
+}
+
 addEntryButton.addEventListener("click", addEntry);
+budgetForm.addEventListener("submit", calculateBudget);
+clearButton.addEventListener('click' , clearForm)
